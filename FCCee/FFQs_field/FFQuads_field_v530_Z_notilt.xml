@@ -1,0 +1,140 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+
+<lccdd>
+
+  <!-- #==========================================================================
+       #  AIDA Detector description implementation
+       #==========================================================================
+       # Copyright (C) Organisation europeenne pour la Recherche nucleaire (CERN)
+       # All rights reserved.
+       #
+       # For the licensing terms see $DD4hepINSTALL/LICENSE.
+       # For the list of contributors see $DD4hepINSTALL/doc/CREDITS.
+       #
+       #==========================================================================
+  -->
+  <info name="QC1_QC2_electrons_downstream_Z"
+        title="Final Focusing Quadrupoles"
+        author="Andrea Ciarma"
+        url="no"
+        status="development"
+        version="1">
+    <comment>QC1_electrons_downstream</comment>
+  </info>
+
+  
+  <define>
+    <constant name="KQC1R1"  value="-0.2728374282738313"/>
+    <constant name="KQC1R2"  value="-.2728374343227249"/>
+    <constant name="KQC1R3"  value="-.01636493881963944"/>
+    <constant name="KQC2R1"  value=" 0.2613697584691405"/>
+    <constant name="KQC2R2"  value="-0.03334180344925814"/>
+    <constant name="BEAM_C"  value="-1"/>
+    <constant name="BEAM_E"  value="45.6"/>
+    
+    <constant name="QC1_rmin" value="42/2*mm"/>
+    <constant name="QC1_rmax" value="64/2*mm"/>
+    <constant name="QC2_rmin" value="42/2*mm"/>
+    <constant name="QC2_rmax" value="64/2*mm"/>
+    <constant name="QC1R1_len"   value="700*mm"/>
+    <constant name="QC1R2_len"   value="1250*mm"/>
+    <constant name="QC1R3_len"   value="1250*mm"/>
+    <constant name="QC2R1_len"   value="1250*mm"/>
+    <constant name="QC2R2_len"   value="1250*mm"/>
+    <constant name="QC1R1_start" value="2200*mm"/>
+    <constant name="QC1R2_start" value="2980*mm"/>
+    <constant name="QC1R3_start" value="4310*mm"/>
+    <constant name="QC2R1_start" value="5860*mm"/>
+    <constant name="QC2R2_start" value="7190*mm"/>
+   
+    <constant name="screenstart" value="QC2R2_start+QC2R2_len/2.+1000*mm"/>
+  </define>
+
+  <readouts>
+    <readout name="FFQ_Readout">
+        <id>${GlobalTrackerReadoutID}</id>-->
+    </readout>
+    <readout name="screen_Readout">
+        <id>${GlobalTrackerReadoutID}</id>-->
+    </readout>
+  </readouts>
+
+  <detectors>
+
+    <detector name="screen" type="DD4hep_Mask_o1_v01" vis="YOKEVis" id="DetID_screen" readout="screen_Readout">
+      <parameter crossingangle="CrossingAngle*1e-12" />
+      <envelope vis="KICKVis">
+        <shape type="Assembly"/>
+      </envelope>
+      <section type="Upstream"               start="screenstart"    end="screenstart+1*mm"
+	       rMin1="0*mm" rMin2="0*mm"  rMax1="500*mm"   rMax2="500*mm"
+	       material="Iron" name="screen_up" sensitive="tracker"/>
+    </detector>
+
+    
+    <detector name="FFQs" type="DD4hep_Mask_o1_v01" vis="KICKVis" id="DetID_FFQs" readout="FFQ_Readout">
+      <parameter crossingangle="CrossingAngle*1e-12" />
+      <envelope vis="KICKVis">
+        <shape type="Assembly"/>
+      </envelope>
+      <section type="Upstream"               start="QC1R1_start"    end="QC1R1_start+QC1R1_len" 
+	       rMin1="QC1_rmin"  rMin2="QC1_rmin"  rMax1="QC1_rmax"   rMax2="QC1_rmax"  
+	       material="FFQMaterial" name="QC1R1u" sensitive="tracker"/>
+      <section type="Upstream"               start="QC1R2_start"    end="QC1R2_start+QC1R2_len"
+               rMin1="QC1_rmin"  rMin2="QC1_rmin"  rMax1="QC1_rmax"   rMax2="QC1_rmax"
+               material="FFQMaterial" name="QC1R2u" sensitive="tracker"/>
+      <section type="Upstream"               start="QC1R3_start"    end="QC1R3_start+QC1R3_len"
+               rMin1="QC1_rmin"  rMin2="QC1_rmin"  rMax1="QC1_rmax"   rMax2="QC1_rmax"
+               material="FFQMaterial" name="QC1R3u" sensitive="tracker"/>
+      
+      <section type="Upstream"               start="QC2R1_start"    end="QC2R1_start+QC2R1_len"
+               rMin1="QC2_rmin"  rMin2="QC2_rmin"  rMax1="QC2_rmax"   rMax2="QC2_rmax"
+               material="FFQMaterial" name="QC2R1u" sensitive="tracker"/>
+      <section type="Upstream"               start="QC2R2_start"    end="QC2R2_start+QC2R2_len"
+               rMin1="QC2_rmin"  rMin2="QC2_rmin"  rMax1="QC2_rmax"   rMax2="QC2_rmax"
+               material="FFQMaterial" name="QC2R2u" sensitive="tracker"/>
+    </detector>    
+  </detectors>
+
+  <fields>
+    <field name="QC1R1_field_E" type="MultipoleMagnet" Z="0.0*tesla">
+      <position y="0*cm" z="(QC1R1_len/2. + QC1R1_start)" x="0*cm"/>
+      <rotation x="0" y="0" z="0.0"/>
+      <coefficient coefficient="0*tesla"/>
+      <coefficient coefficient="(BEAM_C)*(BEAM_E)*(KQC1R1)/0.3*tesla/m"/>
+      <shape type="Tube" rmin="0.*cm" rmax="QC1_rmin" dz="QC1R1_len/2." />
+    </field>
+    <field name="QC1R2_field_E" type="MultipoleMagnet" Z="0.0*tesla">
+      <position y="0*cm" z="(QC1R2_len/2. + QC1R2_start)" x="0*cm"/>
+      <rotation x="0" y="0" z="0.0"/>
+      <coefficient coefficient="0*tesla"/>
+      <coefficient coefficient="(BEAM_C)*(BEAM_E)*(KQC1R2)/0.3*tesla/m"/>
+      <shape type="Tube" rmin="0.*cm" rmax="QC1_rmin" dz="QC1R2_len/2." />
+    </field>
+    <field name="QC1R3_field_E" type="MultipoleMagnet" Z="0.0*tesla">
+      <position y="0*cm" z="(QC1R3_len/2. + QC1R3_start)" x="0*cm"/>
+      <rotation x="0" y="0" z="0.0"/>
+      <coefficient coefficient="0*tesla"/>
+      <coefficient coefficient="(BEAM_C)*(BEAM_E)*(KQC1R3)/0.3*tesla/m"/>
+      <shape type="Tube" rmin="0.*cm" rmax="QC1_rmin" dz="QC1R3_len/2." />
+    </field>
+
+    <field name="QC2R1_field_E" type="MultipoleMagnet" Z="0.0*tesla">
+      <position y="0*cm" z="(QC2R1_len/2. + QC2R1_start)" x="0*cm"/>
+      <rotation x="0" y="0" z="0.0"/>
+      <coefficient coefficient="0*tesla"/>
+      <coefficient coefficient="(BEAM_C)*(BEAM_E)*(KQC2R1)/0.3*tesla/m"/>
+      <shape type="Tube" rmin="0.*cm" rmax="QC1_rmin" dz="QC2R1_len/2." />
+    </field>
+    <field name="QC2R2_field_E" type="MultipoleMagnet" Z="0.0*tesla">
+      <position y="0*cm" z="(QC2R2_len/2. + QC2R2_start)" x="0*cm"/>
+      <rotation x="0" y="0" z="0.0"/>
+      <coefficient coefficient="0*tesla"/>
+      <coefficient coefficient="(BEAM_C)*(BEAM_E)*(KQC2R2)/0.3*tesla/m"/>
+      <shape type="Tube" rmin="0.*cm" rmax="QC1_rmin" dz="QC2R2_len/2." />
+    </field>
+    
+  </fields>
+  
+
+</lccdd>
