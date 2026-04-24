@@ -1,9 +1,5 @@
 cmake_minimum_required(VERSION 3.20 FATAL_ERROR)
 
-if( POLICY CMP0167 )
-  cmake_policy(SET CMP0167 NEW)
-endif()
-
 #---------------------------
 set( PackageName k4geo )
 #---------------------------
@@ -12,7 +8,7 @@ project(${PackageName} LANGUAGES CXX)
 
 # project version
 SET( ${PackageName}_VERSION_MAJOR 0 )
-SET( ${PackageName}_VERSION_MINOR 24 )
+SET( ${PackageName}_VERSION_MINOR 23 )
 SET( ${PackageName}_VERSION_PATCH 0 )
 
 SET( ${PackageName}_VERSION "${${PackageName}_VERSION_MAJOR}.${${PackageName}_VERSION_MINOR}" )
@@ -156,13 +152,6 @@ endif()
 
 #Create this_package.sh file, and install
 dd4hep_instantiate_package(${PackageName})
-if(EXISTS "${PROJECT_BINARY_DIR}/this${PackageName}.sh")
-  message(STATUS "this${PackageName}.sh created successfully.")
-  # Replace the K4GEO environment variable with the path to the source
-  file(APPEND "${PROJECT_BINARY_DIR}/this${PackageName}.sh" "\nexport K4GEO=\"${CMAKE_CURRENT_SOURCE_DIR}\"")
-else()
-  message(WARNING "this${PackageName}.sh was not created.")
-endif()
 
 add_subdirectory(detectorSegmentations)
 add_subdirectory(detectorCommon)
@@ -216,16 +205,24 @@ install(FILES ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_CMAKEDIR}/k4geoConfig.cmake
 if(INSTALL_BEAMPIPE_STL_FILES)
 
     set(STL_FILES
-          "AlBeMet162_30042024.stl"
-          "Copper_pipe_28092023.stl"
-          "Gold_19042024.stl"
-          "Paraffine_19042024.stl"
-          "Tungsten_mask_02102023.stl"
-          "Water_30042024.stl"
+          "Pipe_240430/AlBeMet162_30042024.stl"
+          "Pipe_240430/Copper_pipe_28092023.stl"
+          "Pipe_240430/Gold_19042024.stl"
+          "Pipe_240430/Paraffine_19042024.stl"
+          "Pipe_240430/Tungsten_mask_02102023.stl"
+          "Pipe_240430/Water_30042024.stl"
+	  "test2masks/Copper_pipe_04022025.stl"
+	  "test2masks/1_MASk_SRF_27102025.stl"
+	  "test2masks/Mask_2_Andrea_21102025.stl"
+	  "test2masks/prolunga_albemet_13112025.stl"
+	  "test2masks/SS_13112025.stl"
+	  "Pipe_01042026/Copper_lungo.stl"
+	  "Pipe_01042026/Maschere_1.stl"
+	  "Pipe_01042026/Maschere_2.stl"
         )
     # Set main FCC url
     set(FCC_URL "https://fccsw.web.cern.ch/fccsw/filesForSimDigiReco")
-    set(STL_PATH "stl_files/Pipe_240430")
+    set(STL_PATH "stl_files")
 
     # Set the output directory where the file will be placed
     set(OUTPUT_DIR "${PROJECT_SOURCE_DIR}/FCCee/MDI/compact/${STL_PATH}")
