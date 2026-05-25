@@ -1032,13 +1032,10 @@
     </material>
   </materials>
 
-  <info name="SCEPCal"
-        title="Segmented Crystal Electromagnetic Precision ECAL"
-        author="Wonyong Chung"
-        url="https://github.com/wonyongc/SCEPCal"
-        status="release"
-        version="1.0">
-  </info>
+  <!--
+      Segmented Crystal Electromagnetic Precision ECAL.
+      Wonyong Chung
+  -->
 
   <readouts>
     <!-- Different segmentations used to accommodate different granularities in main and timing layer -->
@@ -1058,7 +1055,7 @@
     <!--  -->
     <readout name="SCEPCal_Main">
       <segmentation type="SCEPCal_MainSegmentation_k4geo"/>
-      <id>system:5,phi:7,theta:11,gamma:4,epsilon:4,depth:1</id>
+      <id>system:5,phi:7,theta:11,gamma:4,epsilon:4,depth:1,cherenkov:1</id>
     </readout>
     <readout name="SCEPCal_Timing">
       <segmentation type="SCEPCal_TimingSegmentation_k4geo"/>

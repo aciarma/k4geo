@@ -40,121 +40,121 @@ namespace DDSegmentation {
     m_bladeAngle.clear();
 
     try {
-      m_bladeAngle.push_back(dd4hepgeo->constant<double>("BladeAngle1"));
+      m_bladeAngle.push_back(dd4hepgeo->constant<double>("EMECBladeAngle1"));
     } catch (...) {
-      std::cout << "BladeAngle1 not found in detector metadata, exiting..." << std::endl;
+      std::cout << "EMECBladeAngle1 not found in detector metadata, exiting..." << std::endl;
       exit(1);
     }
     try {
-      m_bladeAngle.push_back(dd4hepgeo->constant<double>("BladeAngle2"));
+      m_bladeAngle.push_back(dd4hepgeo->constant<double>("EMECBladeAngle2"));
     } catch (...) {
-      std::cout << "BladeAngle2 not found in detector metadata, exiting..." << std::endl;
+      std::cout << "EMECBladeAngle2 not found in detector metadata, exiting..." << std::endl;
       exit(1);
     }
     try {
-      m_bladeAngle.push_back(dd4hepgeo->constant<double>("BladeAngle3"));
+      m_bladeAngle.push_back(dd4hepgeo->constant<double>("EMECBladeAngle3"));
     } catch (...) {
-      std::cout << "BladeAngle3 not found in detector metadata, exiting..." << std::endl;
+      std::cout << "EMECBladeAngle3 not found in detector metadata, exiting..." << std::endl;
       exit(1);
     }
 
     m_nUnitCells.clear();
     try {
-      m_nUnitCells.push_back(dd4hepgeo->constant<int>("nUnitCells1"));
+      m_nUnitCells.push_back(dd4hepgeo->constant<int>("EMECnUnitCells1"));
     } catch (...) {
-      std::cout << "nUnitCells1 not found in detector metadata, exiting..." << std::endl;
+      std::cout << "EMECnUnitCells1 not found in detector metadata, exiting..." << std::endl;
       exit(1);
     }
     try {
-      m_nUnitCells.push_back(dd4hepgeo->constant<int>("nUnitCells2"));
+      m_nUnitCells.push_back(dd4hepgeo->constant<int>("EMECnUnitCells2"));
     } catch (...) {
-      std::cout << "nUnitCells2 not found in detector metadata, exiting..." << std::endl;
+      std::cout << "EMECnUnitCells2 not found in detector metadata, exiting..." << std::endl;
       exit(1);
     }
     try {
-      m_nUnitCells.push_back(dd4hepgeo->constant<int>("nUnitCells3"));
+      m_nUnitCells.push_back(dd4hepgeo->constant<int>("EMECnUnitCells3"));
     } catch (...) {
-      std::cout << "nUnitCells3 not found in detector metadata, exiting..." << std::endl;
+      std::cout << "EMECnUnitCells3 not found in detector metadata, exiting..." << std::endl;
       exit(1);
     }
 
     m_numReadoutRhoLayers.clear();
     try {
-      m_numReadoutRhoLayers.push_back(dd4hepgeo->constant<int>("ECalEndcapNumReadoutRhoLayersWheel1"));
+      m_numReadoutRhoLayers.push_back(dd4hepgeo->constant<int>("EMECNumReadoutRhoLayersWheel1"));
     } catch (...) {
-      std::cout << "ECalEndcapNumReadoutRhoLayersWheel1 not found in detector metadata, exiting..." << std::endl;
+      std::cout << "EMECNumReadoutRhoLayersWheel1 not found in detector metadata, exiting..." << std::endl;
       exit(1);
     }
     try {
-      m_numReadoutRhoLayers.push_back(dd4hepgeo->constant<int>("ECalEndcapNumReadoutRhoLayersWheel2"));
+      m_numReadoutRhoLayers.push_back(dd4hepgeo->constant<int>("EMECNumReadoutRhoLayersWheel2"));
     } catch (...) {
-      std::cout << "ECalEndcapNumReadoutRhoLayersWheel2 not found in detector metadata, exiting..." << std::endl;
+      std::cout << "EMECNumReadoutRhoLayersWheel2 not found in detector metadata, exiting..." << std::endl;
       exit(1);
     }
     try {
-      m_numReadoutRhoLayers.push_back(dd4hepgeo->constant<int>("ECalEndcapNumReadoutRhoLayersWheel3"));
+      m_numReadoutRhoLayers.push_back(dd4hepgeo->constant<int>("EMECNumReadoutRhoLayersWheel3"));
     } catch (...) {
-      std::cout << "ECalEndcapNumReadoutRhoLayersWheel3 not found in detector metadata, exiting..." << std::endl;
+      std::cout << "EMECNumReadoutRhoLayersWheel3 not found in detector metadata, exiting..." << std::endl;
       exit(1);
     }
 
     m_numReadoutZLayers.clear();
     try {
-      m_numReadoutZLayers.push_back(dd4hepgeo->constant<int>("ECalEndcapNumReadoutZLayersWheel1"));
+      m_numReadoutZLayers.push_back(dd4hepgeo->constant<int>("EMECNumReadoutZLayersWheel1"));
     } catch (...) {
-      std::cout << "ECalEndcapNumReadoutZLayersWheel1 not found in detector metadata, exiting..." << std::endl;
+      std::cout << "EMECNumReadoutZLayersWheel1 not found in detector metadata, exiting..." << std::endl;
       exit(1);
     }
     try {
-      m_numReadoutZLayers.push_back(dd4hepgeo->constant<int>("ECalEndcapNumReadoutZLayersWheel2"));
+      m_numReadoutZLayers.push_back(dd4hepgeo->constant<int>("EMECNumReadoutZLayersWheel2"));
     } catch (...) {
-      std::cout << "ECalEndcapNumReadoutZLayersWheel2 not found in detector metadata, exiting..." << std::endl;
+      std::cout << "EMECNumReadoutZLayersWheel2 not found in detector metadata, exiting..." << std::endl;
       exit(1);
     }
     try {
-      m_numReadoutZLayers.push_back(dd4hepgeo->constant<int>("ECalEndcapNumReadoutZLayersWheel3"));
+      m_numReadoutZLayers.push_back(dd4hepgeo->constant<int>("EMECNumReadoutZLayersWheel3"));
     } catch (...) {
-      std::cout << "ECalEndcapNumReadoutZLayersWheel3 not found in detector metadata, exiting..." << std::endl;
+      std::cout << "EMECNumReadoutZLayersWheel3 not found in detector metadata, exiting..." << std::endl;
       exit(1);
     }
 
     m_numCalibRhoLayers.clear();
     try {
-      m_numCalibRhoLayers.push_back(dd4hepgeo->constant<int>("ECalEndcapNumCalibRhoLayersWheel1"));
+      m_numCalibRhoLayers.push_back(dd4hepgeo->constant<int>("EMECNumCalibRhoLayersWheel1"));
     } catch (...) {
-      std::cout << "ECalEndcapNumCalibRhoLayersWheel1 not found in detector metadata, exiting..." << std::endl;
+      std::cout << "EMECNumCalibRhoLayersWheel1 not found in detector metadata, exiting..." << std::endl;
       exit(1);
     }
     try {
-      m_numCalibRhoLayers.push_back(dd4hepgeo->constant<int>("ECalEndcapNumCalibRhoLayersWheel2"));
+      m_numCalibRhoLayers.push_back(dd4hepgeo->constant<int>("EMECNumCalibRhoLayersWheel2"));
     } catch (...) {
-      std::cout << "ECalEndcapNumCalibRhoLayersWheel2 not found in detector metadata, exiting..." << std::endl;
+      std::cout << "EMECNumCalibRhoLayersWheel2 not found in detector metadata, exiting..." << std::endl;
       exit(1);
     }
     try {
-      m_numCalibRhoLayers.push_back(dd4hepgeo->constant<int>("ECalEndcapNumCalibRhoLayersWheel3"));
+      m_numCalibRhoLayers.push_back(dd4hepgeo->constant<int>("EMECNumCalibRhoLayersWheel3"));
     } catch (...) {
-      std::cout << "ECalEndcapNumCalibRhoLayersWheel3 not found in detector metadata, exiting..." << std::endl;
+      std::cout << "EMECNumCalibRhoLayersWheel3 not found in detector metadata, exiting..." << std::endl;
       exit(1);
     }
 
     m_numCalibZLayers.clear();
     try {
-      m_numCalibZLayers.push_back(dd4hepgeo->constant<int>("ECalEndcapNumCalibZLayersWheel1"));
+      m_numCalibZLayers.push_back(dd4hepgeo->constant<int>("EMECNumCalibZLayersWheel1"));
     } catch (...) {
-      std::cout << "ECalEndcapNumCalibZLayersWheel1 not found in detector metadata, exiting..." << std::endl;
+      std::cout << "EMECNumCalibZLayersWheel1 not found in detector metadata, exiting..." << std::endl;
       exit(1);
     }
     try {
-      m_numCalibZLayers.push_back(dd4hepgeo->constant<int>("ECalEndcapNumCalibZLayersWheel2"));
+      m_numCalibZLayers.push_back(dd4hepgeo->constant<int>("EMECNumCalibZLayersWheel2"));
     } catch (...) {
-      std::cout << "ECalEndcapNumCalibZLayersWheel2 not found in detector metadata, exiting..." << std::endl;
+      std::cout << "EMECNumCalibZLayersWheel2 not found in detector metadata, exiting..." << std::endl;
       exit(1);
     }
     try {
-      m_numCalibZLayers.push_back(dd4hepgeo->constant<int>("ECalEndcapNumCalibZLayersWheel3"));
+      m_numCalibZLayers.push_back(dd4hepgeo->constant<int>("EMECNumCalibZLayersWheel3"));
     } catch (...) {
-      std::cout << "ECalEndcapNumCalibZLayersWheel3 not found in detector metadata, exiting..." << std::endl;
+      std::cout << "EMECNumCalibZLayersWheel3 not found in detector metadata, exiting..." << std::endl;
       exit(1);
     }
 
@@ -239,13 +239,18 @@ namespace DDSegmentation {
     double zdepth = m_numReadoutZLayers[iWheel] * m_gridSizeZ[iWheel];
 
     double zLoc = TMath::Abs(z(cID)) - m_offsetZ[iWheel] - zdepth / 2;
-    double x = zLoc / TMath::Tan(m_bladeAngle[iWheel]);
-    double y = TMath::Sqrt(rhoLoc * rhoLoc - x * x);
-    // rotate about z axis by phiCent
-    double xprime = x * TMath::Cos(phiCent) + y * TMath::Sin(phiCent);
-    double yprime = y * TMath::Cos(phiCent) - x * TMath::Sin(phiCent);
 
-    return TMath::ATan2(xprime, yprime);
+    // calculation position in frame with unit cell at phi = 0
+    double y = zLoc / TMath::Tan(m_bladeAngle[iWheel]);
+    double x = TMath::Sqrt(rhoLoc * rhoLoc - y * y);
+    double locPhi = TMath::ATan2(y, x);
+
+    // now rotate by phi position of the unit cell
+    double phi = locPhi + phiCent;
+    if (phi > TMath::Pi())
+      phi = phi - TMath::TwoPi();
+
+    return phi;
   }
 
   /// determine the longitudinal position (z) based on the cell ID
