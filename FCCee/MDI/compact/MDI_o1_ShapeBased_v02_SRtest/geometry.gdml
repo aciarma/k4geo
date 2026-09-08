@@ -1,0 +1,446 @@
+<?xml version="1.0"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/mlueckhof/Codes/GDML_3_1_6/schema/gdml.xsd">
+  <define>
+    <position name="av_1_impr_1_tube_VertexInnerBe_wall_pv_00x24b00c0intoppos" x="-0.067497469" y="0" z="4.4995" unit="cm"/>
+    <rotation name="av_1_impr_1_tube_VertexInnerBe_wall_pv_00x24b00c0intoprot" x="0.0" y="0.859436692696249" z="0" unit="deg"/>
+    <position name="av_1_impr_1_tube_VertexInnerBe_wall2_pv_10x24afdb0intoppos" x="0.067497469" y="0" z="-4.4995" unit="cm"/>
+    <rotation name="av_1_impr_1_tube_VertexInnerBe_wall2_pv_10x24afdb0intoprot" x="-180" y="-0.859436692696249" z="-180" unit="deg"/>
+
+    <position name="tube_VertexInnerBe_wall_00x24ac2b0intube_pos" x="0" y="0" z="0" unit="cm"/>
+    <position name="tube_VertexInnerBe_wall2_00x24ac3d0intube_pos" x="0" y="0" z="0" unit="cm"/>
+
+    <position name="av_1_impr_1_tube_FirstConeBe_wall_pv_20x24b0400intoppos" x="-0.7424722" y="0" z="49.5" unit="cm"/>
+    <rotation name="av_1_impr_1_tube_FirstConeBe_wall_pv_20x24b0400intoprot" x="0" y="0.859436692696249" z="0" unit="deg"/>
+    <position name="av_1_impr_1_tube_FirstConeBe_wall2_pv_30x24b0550intoppos" x="0.7424722" y="0" z="-49.5" unit="cm"/>
+    <rotation name="av_1_impr_1_tube_FirstConeBe_wall2_pv_30x24b0550intoprot" x="-180" y="-0.859436692696249" z="-180" unit="deg"/>
+
+    <position name="tube_FirstConeBe_wall_00x24ac2b0intube_pos" x="0" y="0" z="0" unit="cm"/>
+    <position name="tube_FirstConeBe_wall2_00x24ac3d0intube_pos" x="0" y="0" z="0" unit="cm"/>
+
+    <position name="tube_CopperCone_wall_00x24abb30intube_CopperConepos" x="0" y="0" z="0" unit="cm"/>
+    <position name="av_4_impr_1_tube_CopperCone_pv_40x24b1cb0intoppos" x="-1.54491956" y="0" z="102.9985" unit="cm"/>
+    <rotation name="av_4_impr_1_tube_CopperCone_pv_40x24b1cb0intoprot" x="0" y="0.859436692696249" z="0" unit="deg"/>
+    <position name="tube_CopperCone_wall2_00x24abc10intube_CopperCone0x1pos" x="0" y="0" z="0" unit="cm"/>
+    <position name="av_4_impr_1_tube_CopperCone_pv_50x24b16f0intoppos" x="1.54491956" y="0" z="-102.9985" unit="cm"/>
+    <rotation name="av_4_impr_1_tube_CopperCone_pv_50x24b16f0intoprot" x="-180" y="-0.859436692696249" z="-180" unit="deg"/>
+
+    <position name="tube_SplitVacChambers_wall_0_00x24a9070intube_SplitVacChambers_0pos" x="0" y="0" z="0" unit="cm"/>
+    <position name="av_4_impr_1_tube_SplitVacChambers_0_pv_60x24b2230intoppos" x="-1.742139" y="0" z="116.147" unit="cm"/>
+    <rotation name="av_4_impr_1_tube_SplitVacChambers_0_pv_60x24b2230intoprot" x="0" y="0.859436692696249" z="0" unit="deg"/>
+    <position name="tube_SplitVacChambers_wall_1_00x24abd50intube_SplitVacChambers_1pos" x="0" y="0" z="0" unit="cm"/>
+    <position name="av_4_impr_1_tube_SplitVacChambers_1_pv_70x24b1ef0intoppos" x="1.742139" y="0" z="-116.147" unit="cm"/>
+    <rotation name="av_4_impr_1_tube_SplitVacChambers_1_pv_70x24b1ef0intoprot" x="-180" y="-0.859436692696249" z="-180" unit="deg"/>
+
+    <position name="tube_DownStreamBeamPipe_1_wall_0_00x24abe50intube_DownStreamBeamPipe_1_0pos" x="0" y="0" z="0" unit="cm"/>
+    <position name="av_4_impr_1_tube_DownStreamBeamPipe_1_0_pv_80x24b2000intoppos" x="0" y="0" z="163.076588" unit="cm"/>
+    <rotation name="av_4_impr_1_tube_DownStreamBeamPipe_1_0_pv_80x24b2000intoprot" x="0" y="0" z="0" unit="deg"/>
+    <position name="tube_DownStreamBeamPipe_1_wall_1_00x24abf50intube_DownStreamBeamPipe_1_1pos" x="0" y="0" z="0" unit="cm"/>
+    <position name="av_4_impr_1_tube_DownStreamBeamPipe_1_1_pv_90x24b2100intoppos" x="4.893765858" y="0" z="-163.076588" unit="cm"/>
+    <rotation name="av_4_impr_1_tube_DownStreamBeamPipe_1_1_pv_90x24b2100intoprot" x="-180" y="-1.71887338539247004" z="-180" unit="deg"/>
+
+    <position name="tube_UpStreamBeamPipe_1_wall_0_00x24ac070intube_UpStreamBeamPipe_1_0pos" x="0" y="0" z="0" unit="cm"/>
+    <position name="av_4_impr_1_tube_UpStreamBeamPipe_1_0_pv_100x24b27d0intoppos" x="-4.893765858" y="0" z="163.076588" unit="cm"/>
+    <rotation name="av_4_impr_1_tube_UpStreamBeamPipe_1_0_pv_100x24b27d0intoprot" x="0" y="1.71887338539247004" z="0" unit="deg"/>
+    <position name="tube_UpStreamBeamPipe_1_wall_1_00x24ac190intube_UpStreamBeamPipe_1_1pos" x="0" y="0" z="0" unit="cm"/>
+    <position name="av_4_impr_1_tube_UpStreamBeamPipe_1_1_pv_110x24b22f0intoppos" x="0" y="0" z="-163.076588" unit="cm"/>
+    <rotation name="av_4_impr_1_tube_UpStreamBeamPipe_1_1_pv_110x24b22f0intoprot" x="-180" y="0" z="-180" unit="deg"/>
+
+    <!-- Elliptical mask placement, computed to sit as a DAUGHTER inside
+         tube_UpStreamBeamPipe_1_1 (nested alongside its Cu wall), at
+         global (x=0, y=0, z=-130cm), unrotated. Unlike the earlier
+         CopperCone location, this beam pipe segment has ZERO transverse
+         offset and ZERO tilt relative to the global z-axis (pure 180deg
+         flip only, position (0,0,-163.076588)cm, rotation
+         (-180,0,-180)deg) - so the mask lands exactly on this pipe's own
+         local axis, local z=-33.0766cm, well clear (15.3cm) of the
+         subtraction cut near the pipe's junction end (local z=-48.4).
+         Bore radius here is CONSTANT at 1.5cm (no taper, unlike the
+         CopperCone), so no worst-case-across-length calc is needed -
+         see conversation history for the full derivation. -->
+    <position name="ellipticalMask_upstream_pos" x="0" y="0" z="-33.0765880" unit="cm"/>
+    <rotation name="ellipticalMask_upstream_rot" x="-180" y="0" z="-180" unit="deg"/>
+
+  </define>
+  <materials>
+    <element name="hydrogen"   formula="H"   Z="1">    <atom value="1.0079"/>   </element>
+    <element name="carbon"     formula="C"   Z="6">    <atom value="12.0107"/>   </element>
+    <element name="oxygen"     formula="O"   Z="8">    <atom value="15.999"/>   </element>
+    <material name="Vacuum">
+      <D unit="g/cm3" value="1.16336e-15"/>
+      <fraction ref="hydrogen" n="0.482"/>
+      <fraction ref="carbon" n="0.221"/>
+      <fraction ref="oxygen" n="0.297"/>
+    </material>
+    <material name="Be" Z="4">
+      <D unit="g/cm3" value="1.85"/>
+      <atom unit="g/mole" value="9.0122"/>
+    </material>
+    <material name="Cu" Z="29">
+      <D unit="g/cm3" value="8.96"/>
+      <atom unit="g/mole" value="63.546"/>
+    </material>
+    <material name="W" Z="74">
+      <D unit="g/cm3" value="19.3"/>
+      <atom unit="g/mole" value="183.84"/>
+    </material>
+  </materials>
+  <solids>
+    <box name="top_Solid" x="100" y="100" z="420.0000000002965" lunit="cm"/>
+
+    <cone name="tube_VertexInnerBe_wall_shape_" z="9.0" rmin1="1.0" rmin2="1.0" rmax1="1.12" rmax2="1.12" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+    <cone name="tube_VertexInnerBe_shape_" z="9.0" rmin1="0" rmin2="0" rmax1="0.999" rmax2="0.999" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+
+    <cone name="tube_FirstConeBe_wall2_shape_" z="81" rmin1="1.0" rmin2="2.8175" rmax1="1.10" rmax2="2.9175" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+    <cone name="tube_FirstConeBe_shape_" z="81" rmin1="0" rmin2="0" rmax1="0.999" rmax2="2.8175" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+
+    <cone name="tube_CopperCone_shape_" z="25.996" rmin1="0" rmin2="0" rmax1="2.9175" rmax2="3.35945" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+    <cone name="tube_CopperCone_wall_shape_" z="25.996" rmin1="2.8175" rmin2="3.35945" rmax1="2.9175" rmax2="3.35945" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+    <cone name="tube_SplitVacChambers_1_shape_" z="0.06" rmin1="0" rmin2="0" rmax1="3.152455" rmax2="3.36455" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+    <cone name="tube_SplitVacChambers_wall_0_shape_0x2" z="0.06" rmin1="0" rmin2="0" rmax1="3.152455" rmax2="3.36455" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+    <tube name="tube_SplitVacChambers_wall_0_shape_0x3" z="1.5" rmin="0" rmax="1.5" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+    <subtraction name="tube_SplitVacChambers_wall_0_shape_0x1">
+      <first ref="tube_SplitVacChambers_wall_0_shape_0x2"/>
+      <second ref="tube_SplitVacChambers_wall_0_shape_0x3"/>
+      <position name="tube_SplitVacChambers_wall_0_shape_0x1tube_SplitVacChambers_wall_0_shape_0x3pos" x="-1.7423356771359602" y="0" z="0" unit="cm"/>
+      <rotation name="tube_SplitVacChambers_wall_0_shape_0x1tube_SplitVacChambers_wall_0_shape_0x3rot" x="0" y="-0.85943669269623502" z="0" unit="deg"/>
+    </subtraction>
+    <tube name="tube_SplitVacChambers_wall_0_shape_0x4" rmin="0" rmax="1.5" z="1.5" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+    <subtraction name="tube_SplitVacChambers_wall_0_shape_">
+      <first ref="tube_SplitVacChambers_wall_0_shape_0x1"/>
+      <second ref="tube_SplitVacChambers_wall_0_shape_0x4"/>
+      <position name="tube_SplitVacChambers_wall_0_shape_tube_SplitVacChambers_wall_0_shape_0x4pos" x="1.7423356771359602" y="0" z="0" unit="cm"/>
+      <rotation name="tube_SplitVacChambers_wall_0_shape_tube_SplitVacChambers_wall_0_shape_0x4rot" x="0" y="0.85943669269623502" z="0" unit="deg"/>
+    </subtraction>
+    <subtraction name="tube_SplitVacChambers_wall_1_shape_0x1">
+      <first ref="tube_SplitVacChambers_wall_0_shape_0x2"/>
+      <second ref="tube_SplitVacChambers_wall_0_shape_0x3"/>
+      <position name="tube_SplitVacChambers_wall_1_shape_0x1tube_SplitVacChambers_wall_0_shape_0x3pos" x="1.7423356771359602" y="0" z="0" unit="cm"/>
+      <rotation name="tube_SplitVacChambers_wall_1_shape_0x1tube_SplitVacChambers_wall_0_shape_0x3rot" x="0" y="0.85943669269623502" z="0" unit="deg"/>
+    </subtraction>
+    <subtraction name="tube_SplitVacChambers_wall_1_shape_">
+      <first ref="tube_SplitVacChambers_wall_1_shape_0x1"/>
+      <second ref="tube_SplitVacChambers_wall_0_shape_0x4"/>
+      <position name="tube_SplitVacChambers_wall_1_shape_tube_SplitVacChambers_wall_0_shape_0x4pos" x="-1.7423356771359602" y="0" z="0" unit="cm"/>
+      <rotation name="tube_SplitVacChambers_wall_1_shape_tube_SplitVacChambers_wall_0_shape_0x4rot" x="0" y="-0.85943669269623502" z="0" unit="deg"/>
+    </subtraction>
+
+    <cone name="tube_DownStreamBeamPipe_1_0_shape_0x1" z="93.69" rmin1="0" rmin2="0" rmax1="1.60" rmax2="1.60" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+    <tube name="tube_DownStreamBeamPipe_1_wall_0_shape_" rmin="0" rmax="3.20" z="3.20" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+    <subtraction name="tube_DownStreamBeamPipe_1_0_shape_">
+      <first ref="tube_DownStreamBeamPipe_1_0_shape_0x1"/>
+      <second ref="tube_DownStreamBeamPipe_1_wall_0_shape_"/>
+      <position name="tube_DownStreamBeamPipe_1_0_shape_tube_DownStreamBeamPipe_1_wall_0_shape_pos" x="0" y="0" z="-48.405884" unit="cm"/>
+      <rotation name="tube_DownStreamBeamPipe_1_0_shape_tube_DownStreamBeamPipe_1_wall_0_shape_rot" x="0" y="-0.85943669269623502" z="0" unit="deg"/>
+    </subtraction>
+    <cone name="tube_DownStreamBeamPipe_1_wall_0_shape_0x2" z="93.69" rmin1="1.5" rmin2="1.5" rmax1="1.60" rmax2="1.60" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+    <subtraction name="tube_DownStreamBeamPipe_1_wall_0_shape_0x1">
+      <first ref="tube_DownStreamBeamPipe_1_wall_0_shape_0x2"/>
+      <second ref="tube_DownStreamBeamPipe_1_wall_0_shape_"/>
+      <position name="tube_DownStreamBeamPipe_1_wall_0_shape_0x1tube_DownStreamBeamPipe_1_wall_0_shape_pos" x="0" y="0" z="-48.405884" unit="cm"/>
+      <rotation name="tube_DownStreamBeamPipe_1_wall_0_shape_0x1tube_DownStreamBeamPipe_1_wall_0_shape_rot" x="0" y="-0.85943669269623502" z="0" unit="deg"/>
+    </subtraction>
+    <subtraction name="tube_DownStreamBeamPipe_1_1_shape_">
+      <first ref="tube_DownStreamBeamPipe_1_0_shape_0x1"/>
+      <second ref="tube_DownStreamBeamPipe_1_wall_0_shape_"/>
+      <position name="tube_DownStreamBeamPipe_1_1_shape_tube_DownStreamBeamPipe_1_wall_0_shape_pos" x="0" y="0" z="-48.405884" unit="cm"/>
+      <rotation name="tube_DownStreamBeamPipe_1_1_shape_tube_DownStreamBeamPipe_1_wall_0_shape_rot" x="0" y="0.85943669269623502" z="0" unit="deg"/>
+    </subtraction>
+    <subtraction name="tube_DownStreamBeamPipe_1_wall_1_shape_">
+      <first ref="tube_DownStreamBeamPipe_1_wall_0_shape_0x2"/>
+      <second ref="tube_DownStreamBeamPipe_1_wall_0_shape_"/>
+      <position name="tube_DownStreamBeamPipe_1_wall_1_shape_tube_DownStreamBeamPipe_1_wall_0_shape_pos" x="0" y="0" z="-48.405884" unit="cm"/>
+      <rotation name="tube_DownStreamBeamPipe_1_wall_1_shape_tube_DownStreamBeamPipe_1_wall_0_shape_rot" x="0" y="0.85943669269623502" z="0" unit="deg"/>
+    </subtraction>
+
+    <cone name="tube_UpStreamBeamPipe_1_0_shape_0x1" z="93.69" rmin1="0" rmin2="0" rmax1="1.60" rmax2="1.60" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+    <tube name="tube_UpStreamBeamPipe_1_0_shape_0x2" rmin="0" rmax="3.20" z="3.20" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+    <subtraction name="tube_UpStreamBeamPipe_1_0_shape_">
+      <first ref="tube_UpStreamBeamPipe_1_0_shape_0x1"/>
+      <second ref="tube_UpStreamBeamPipe_1_0_shape_0x2"/>
+      <position name="tube_UpStreamBeamPipe_1_0_shape_tube_UpStreamBeamPipe_1_0_shape_0x2pos" x="0" y="0" z="-48.405884" unit="cm"/>
+      <rotation name="tube_UpStreamBeamPipe_1_0_shape_tube_UpStreamBeamPipe_1_0_shape_0x2rot" x="0" y="0.85943669269623502" z="0" unit="deg"/>
+    </subtraction>
+    <cone name="tube_UpStreamBeamPipe_1_wall_0_shape_0x1" z="93.65" rmin1="1.5" rmin2="1.5" rmax1="1.60" rmax2="1.60" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+    <subtraction name="tube_UpStreamBeamPipe_1_wall_0_shape_">
+      <first ref="tube_UpStreamBeamPipe_1_wall_0_shape_0x1"/>
+      <second ref="tube_UpStreamBeamPipe_1_0_shape_0x2"/>
+      <position name="tube_UpStreamBeamPipe_1_wall_0_shape_tube_UpStreamBeamPipe_1_0_shape_0x2pos" x="0" y="0" z="-48.405884" unit="cm"/>
+      <rotation name="tube_UpStreamBeamPipe_1_wall_0_shape_tube_UpStreamBeamPipe_1_0_shape_0x2rot" x="0" y="0.85943669269623502" z="0" unit="deg"/>
+    </subtraction>
+    <subtraction name="tube_UpStreamBeamPipe_1_1_shape_">
+      <first ref="tube_UpStreamBeamPipe_1_0_shape_0x1"/>
+      <second ref="tube_UpStreamBeamPipe_1_0_shape_0x2"/>
+      <position name="tube_UpStreamBeamPipe_1_1_shape_tube_UpStreamBeamPipe_1_0_shape_0x2pos" x="0" y="0" z="-48.405884" unit="cm"/>
+      <rotation name="tube_UpStreamBeamPipe_1_1_shape_tube_UpStreamBeamPipe_1_0_shape_0x2rot" x="0" y="-0.85943669269623502" z="0" unit="deg"/>
+    </subtraction>
+    <subtraction name="tube_UpStreamBeamPipe_1_wall_1_shape_">
+      <first ref="tube_UpStreamBeamPipe_1_wall_0_shape_0x1"/>
+      <second ref="tube_UpStreamBeamPipe_1_0_shape_0x2"/>
+      <position name="tube_UpStreamBeamPipe_1_wall_1_shape_tube_UpStreamBeamPipe_1_0_shape_0x2pos" x="0" y="0" z="-48.405884" unit="cm"/>
+      <rotation name="tube_UpStreamBeamPipe_1_wall_1_shape_tube_UpStreamBeamPipe_1_0_shape_0x2rot" x="0" y="-0.85943669269623502" z="0" unit="deg"/>
+    </subtraction>
+    <!-- ==========================================================
+         Elliptical mask, upstream, z = -130 cm from chamber center,
+         nested inside tube_UpStreamBeamPipe_1_1 (see position/rotation
+         comment above).
+         EDIT THESE VALUES to match your actual aperture / thickness:
+           - MASK_APERTURE_DX/DY : ellipse semi-axes (aperture half-widths)
+           - MASK_OUTER_RMAX     : crown outer radius
+           - MASK_THICKNESS      : full thickness along z
+         All lengths in cm (lunit="cm").
+         Current values: 4mm x 7mm elliptical aperture (semi-axes dx=0.4cm,
+         dy=0.7cm), 2 cm long block (dz=1.0cm half-length), circular crown
+         outer shape.
+
+         Outer radius (1.5 cm) is set FLUSH with this pipe segment's vacuum
+         bore radius (rmin1=rmin2=1.5cm, constant, no taper here) - i.e.
+         the mask's outer surface exactly matches the pipe's inner wall,
+         as if it were a solid insert/extension of the beam pipe itself,
+         rather than leaving a gap. Since this pipe segment has zero
+         transverse offset relative to the global z-axis (see above), this
+         is safe to do uniformly across the mask's full length without a
+         worst-case-across-length calculation. Geant4's overlap tolerance
+         (~1e-9 mm) should treat an exact radius match as touching, not
+         overlapping - but this is the tightest possible margin, so
+         re-running the overlap checker after this change is especially
+         important.
+         ========================================================== -->
+    <eltube name="ellipticalMask_aperture_shape_" dx="0.4" dy="0.7" dz="1.0" lunit="cm"/>
+    <tube name="ellipticalMask_outer_shape_" rmin="0" rmax="1.5" z="2.0" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+    <subtraction name="ellipticalMask_upstream_shape_">
+      <first ref="ellipticalMask_outer_shape_"/>
+      <second ref="ellipticalMask_aperture_shape_"/>
+    </subtraction>
+  </solids>
+
+  <structure>
+    <volume name="tube_VertexInnerBe_wall">
+      <materialref ref="Be"/>
+      <solidref ref="tube_VertexInnerBe_wall_shape_"/>
+    </volume>
+    <volume name="tube_VertexInnerBe">
+      <materialref ref="Vacuum"/>
+      <solidref ref="tube_VertexInnerBe_wall_shape_"/>
+      <physvol name="tube_VertexInnerBe_wall_00x24ac2b0" copynumber="0">
+        <volumeref ref="tube_VertexInnerBe_wall"/>
+        <positionref ref="tube_VertexInnerBe_wall_00x24ac2b0intube_pos"/>
+      </physvol>
+    </volume>
+
+    <volume name="tube_VertexInnerBe_wall2">
+      <materialref ref="Be"/>
+      <solidref ref="tube_VertexInnerBe_wall_shape_"/>
+    </volume>
+    <volume name="tube_VertexInnerBe0x1">
+      <materialref ref="Vacuum"/>
+      <solidref ref="tube_VertexInnerBe_wall_shape_"/>
+      <physvol name="tube_VertexInnerBe_wall2_00x24ac3d0" copynumber="0">
+        <volumeref ref="tube_VertexInnerBe_wall2"/>
+        <positionref ref="tube_VertexInnerBe_wall2_00x24ac3d0intube_pos"/>
+      </physvol>
+    </volume>
+
+    <volume name="tube_FirstConeBe_wall">
+      <materialref ref="Be"/>
+      <solidref ref="tube_FirstConeBe_wall2_shape_"/>
+    </volume>
+    <volume name="tube_FirstConeBe">
+      <materialref ref="Vacuum"/>
+      <solidref ref="tube_FirstConeBe_wall2_shape_"/>
+      <physvol name="tube_FirstConeBe_wall_00x24ac2b0" copynumber="0">
+        <volumeref ref="tube_FirstConeBe_wall"/>
+        <positionref ref="tube_FirstConeBe_wall_00x24ac2b0intube_pos"/>
+      </physvol>
+    </volume>
+
+    <volume name="tube_FirstConeBe_wall2">
+      <materialref ref="Be"/>
+      <solidref ref="tube_FirstConeBe_wall2_shape_"/>
+    </volume>
+    <volume name="tube_FirstConeBe0x1">
+      <materialref ref="Vacuum"/>
+      <solidref ref="tube_FirstConeBe_wall2_shape_"/>
+      <physvol name="tube_FirstConeBe_wall2_00x24ac3d0" copynumber="0">
+        <volumeref ref="tube_FirstConeBe_wall2"/>
+        <positionref ref="tube_FirstConeBe_wall2_00x24ac3d0intube_pos"/>
+      </physvol>
+    </volume>
+
+    <volume name="tube_CopperCone_wall">
+      <materialref ref="Cu"/>
+      <solidref ref="tube_CopperCone_wall_shape_"/>
+    </volume>
+    <volume name="tube_CopperCone">
+      <materialref ref="Vacuum"/>
+      <solidref ref="tube_CopperCone_shape_"/>
+      <physvol name="tube_CopperCone_wall_00x24abb30" copynumber="0">
+        <volumeref ref="tube_CopperCone_wall"/>
+        <positionref ref="tube_CopperCone_wall_00x24abb30intube_CopperConepos"/>
+      </physvol>
+    </volume>
+    <volume name="tube_CopperCone_wall2">
+      <materialref ref="Cu"/>
+      <solidref ref="tube_CopperCone_wall_shape_"/>
+    </volume>
+    <volume name="ellipticalMask_upstream">
+      <materialref ref="W"/>
+      <solidref ref="ellipticalMask_upstream_shape_"/>
+    </volume>
+
+    <volume name="tube_CopperCone0x1">
+      <materialref ref="Vacuum"/>
+      <solidref ref="tube_CopperCone_shape_"/>
+      <physvol name="tube_CopperCone_wall2_00x24abc10" copynumber="0">
+        <volumeref ref="tube_CopperCone_wall2"/>
+        <positionref ref="tube_CopperCone_wall2_00x24abc10intube_CopperCone0x1pos"/>
+      </physvol>
+    </volume>
+    <volume name="tube_SplitVacChambers_wall_0">
+      <materialref ref="Cu"/>
+      <solidref ref="tube_SplitVacChambers_wall_0_shape_"/>
+    </volume>
+    <volume name="tube_SplitVacChambers_0">
+      <materialref ref="Vacuum"/>
+      <solidref ref="tube_SplitVacChambers_1_shape_"/>
+      <physvol name="tube_SplitVacChambers_wall_0_00x24a9070" copynumber="0">
+        <volumeref ref="tube_SplitVacChambers_wall_0"/>
+        <positionref ref="tube_SplitVacChambers_wall_0_00x24a9070intube_SplitVacChambers_0pos"/>
+      </physvol>
+    </volume>
+    <volume name="tube_SplitVacChambers_wall_1">
+      <materialref ref="Cu"/>
+      <solidref ref="tube_SplitVacChambers_wall_1_shape_"/>
+    </volume>
+    <volume name="tube_SplitVacChambers_1">
+      <materialref ref="Vacuum"/>
+      <solidref ref="tube_SplitVacChambers_1_shape_"/>
+      <physvol name="tube_SplitVacChambers_wall_1_00x24abd50" copynumber="0">
+        <volumeref ref="tube_SplitVacChambers_wall_1"/>
+        <positionref ref="tube_SplitVacChambers_wall_1_00x24abd50intube_SplitVacChambers_1pos"/>
+      </physvol>
+    </volume>
+    <volume name="tube_DownStreamBeamPipe_1_wall_0">
+      <materialref ref="Cu"/>
+      <solidref ref="tube_DownStreamBeamPipe_1_wall_0_shape_0x1"/>
+    </volume>
+    <volume name="tube_DownStreamBeamPipe_1_0">
+      <materialref ref="Vacuum"/>
+      <solidref ref="tube_DownStreamBeamPipe_1_0_shape_"/>
+      <physvol name="tube_DownStreamBeamPipe_1_wall_0_00x24abe50" copynumber="0">
+        <volumeref ref="tube_DownStreamBeamPipe_1_wall_0"/>
+        <positionref ref="tube_DownStreamBeamPipe_1_wall_0_00x24abe50intube_DownStreamBeamPipe_1_0pos"/>
+      </physvol>
+    </volume>
+    <volume name="tube_DownStreamBeamPipe_1_wall_1">
+      <materialref ref="Cu"/>
+      <solidref ref="tube_DownStreamBeamPipe_1_wall_1_shape_"/>
+    </volume>
+    <volume name="tube_DownStreamBeamPipe_1_1">
+      <materialref ref="Vacuum"/>
+      <solidref ref="tube_DownStreamBeamPipe_1_1_shape_"/>
+      <physvol name="tube_DownStreamBeamPipe_1_wall_1_00x24abf50" copynumber="0">
+        <volumeref ref="tube_DownStreamBeamPipe_1_wall_1"/>
+        <positionref ref="tube_DownStreamBeamPipe_1_wall_1_00x24abf50intube_DownStreamBeamPipe_1_1pos"/>
+      </physvol>
+    </volume>
+    <volume name="tube_UpStreamBeamPipe_1_wall_0">
+      <materialref ref="Cu"/>
+      <solidref ref="tube_UpStreamBeamPipe_1_wall_0_shape_"/>
+    </volume>
+    <volume name="tube_UpStreamBeamPipe_1_0">
+      <materialref ref="Vacuum"/>
+      <solidref ref="tube_UpStreamBeamPipe_1_0_shape_"/>
+      <physvol name="tube_UpStreamBeamPipe_1_wall_0_00x24ac070" copynumber="0">
+        <volumeref ref="tube_UpStreamBeamPipe_1_wall_0"/>
+        <positionref ref="tube_UpStreamBeamPipe_1_wall_0_00x24ac070intube_UpStreamBeamPipe_1_0pos"/>
+      </physvol>
+    </volume>
+    <volume name="tube_UpStreamBeamPipe_1_wall_1">
+      <materialref ref="Cu"/>
+      <solidref ref="tube_UpStreamBeamPipe_1_wall_1_shape_"/>
+    </volume>
+    <volume name="tube_UpStreamBeamPipe_1_1">
+      <materialref ref="Vacuum"/>
+      <solidref ref="tube_UpStreamBeamPipe_1_1_shape_"/>
+      <physvol name="tube_UpStreamBeamPipe_1_wall_1_00x24ac190" copynumber="0">
+        <volumeref ref="tube_UpStreamBeamPipe_1_wall_1"/>
+        <positionref ref="tube_UpStreamBeamPipe_1_wall_1_00x24ac190intube_UpStreamBeamPipe_1_1pos"/>
+      </physvol>
+      <physvol name="ellipticalMask_upstream_pv" copynumber="1">
+        <volumeref ref="ellipticalMask_upstream"/>
+        <positionref ref="ellipticalMask_upstream_pos"/>
+        <rotationref ref="ellipticalMask_upstream_rot"/>
+      </physvol>
+    </volume>
+
+    <volume name="top">
+      <materialref ref="Vacuum"/>
+      <solidref ref="top_Solid"/>
+      <physvol name="av_1_impr_1_tube_VertexInnerBe_wall_pv_00x24b00c0" copynumber="1">
+        <volumeref ref="tube_VertexInnerBe"/>
+        <positionref ref="av_1_impr_1_tube_VertexInnerBe_wall_pv_00x24b00c0intoppos"/>
+        <rotationref ref="av_1_impr_1_tube_VertexInnerBe_wall_pv_00x24b00c0intoprot"/>
+      </physvol>
+      <physvol name="av_1_impr_1_tube_VertexInnerBe_wall2_pv_10x24afdb0" copynumber="2">
+        <volumeref ref="tube_VertexInnerBe0x1"/>
+        <positionref ref="av_1_impr_1_tube_VertexInnerBe_wall2_pv_10x24afdb0intoppos"/>
+        <rotationref ref="av_1_impr_1_tube_VertexInnerBe_wall2_pv_10x24afdb0intoprot"/>
+      </physvol>
+
+      <physvol name="av_1_impr_1_tube_FirstConeBe_wall_pv_20x24b0400" copynumber="3">
+        <volumeref ref="tube_FirstConeBe"/>
+        <positionref ref="av_1_impr_1_tube_FirstConeBe_wall_pv_20x24b0400intoppos"/>
+        <rotationref ref="av_1_impr_1_tube_FirstConeBe_wall_pv_20x24b0400intoprot"/>
+      </physvol>
+      <physvol name="av_1_impr_1_tube_FirstConeBe_wall2_pv_30x24b0550" copynumber="4">
+        <volumeref ref="tube_FirstConeBe0x1"/>
+        <positionref ref="av_1_impr_1_tube_FirstConeBe_wall2_pv_30x24b0550intoppos"/>
+        <rotationref ref="av_1_impr_1_tube_FirstConeBe_wall2_pv_30x24b0550intoprot"/>
+      </physvol>
+
+      <physvol name="av_4_impr_1_tube_CopperCone_pv_40x24b1cb0" copynumber="6">
+        <volumeref ref="tube_CopperCone"/>
+        <positionref ref="av_4_impr_1_tube_CopperCone_pv_40x24b1cb0intoppos"/>
+        <rotationref ref="av_4_impr_1_tube_CopperCone_pv_40x24b1cb0intoprot"/>
+      </physvol>
+      <physvol name="av_4_impr_1_tube_CopperCone_pv_50x24b16f0" copynumber="7">
+        <volumeref ref="tube_CopperCone0x1"/>
+        <positionref ref="av_4_impr_1_tube_CopperCone_pv_50x24b16f0intoppos"/>
+        <rotationref ref="av_4_impr_1_tube_CopperCone_pv_50x24b16f0intoprot"/>
+      </physvol>
+      <physvol name="av_4_impr_1_tube_SplitVacChambers_0_pv_60x24b2230" copynumber="8">
+        <volumeref ref="tube_SplitVacChambers_0"/>
+        <positionref ref="av_4_impr_1_tube_SplitVacChambers_0_pv_60x24b2230intoppos"/>
+        <rotationref ref="av_4_impr_1_tube_SplitVacChambers_0_pv_60x24b2230intoprot"/>
+      </physvol>
+      <physvol name="av_4_impr_1_tube_SplitVacChambers_1_pv_70x24b1ef0" copynumber="9">
+        <volumeref ref="tube_SplitVacChambers_1"/>
+        <positionref ref="av_4_impr_1_tube_SplitVacChambers_1_pv_70x24b1ef0intoppos"/>
+        <rotationref ref="av_4_impr_1_tube_SplitVacChambers_1_pv_70x24b1ef0intoprot"/>
+      </physvol>
+      <physvol name="av_4_impr_1_tube_DownStreamBeamPipe_1_0_pv_80x24b2000" copynumber="10">
+        <volumeref ref="tube_DownStreamBeamPipe_1_0"/>
+        <positionref ref="av_4_impr_1_tube_DownStreamBeamPipe_1_0_pv_80x24b2000intoppos"/>
+        <rotationref ref="av_4_impr_1_tube_DownStreamBeamPipe_1_0_pv_80x24b2000intoprot"/>
+      </physvol>
+      <physvol name="av_4_impr_1_tube_DownStreamBeamPipe_1_1_pv_90x24b2100" copynumber="11">
+        <volumeref ref="tube_DownStreamBeamPipe_1_1"/>
+        <positionref ref="av_4_impr_1_tube_DownStreamBeamPipe_1_1_pv_90x24b2100intoppos"/>
+        <rotationref ref="av_4_impr_1_tube_DownStreamBeamPipe_1_1_pv_90x24b2100intoprot"/>
+      </physvol>
+      <physvol name="av_4_impr_1_tube_UpStreamBeamPipe_1_0_pv_100x24b27d0" copynumber="12">
+        <volumeref ref="tube_UpStreamBeamPipe_1_0"/>
+        <positionref ref="av_4_impr_1_tube_UpStreamBeamPipe_1_0_pv_100x24b27d0intoppos"/>
+        <rotationref ref="av_4_impr_1_tube_UpStreamBeamPipe_1_0_pv_100x24b27d0intoprot"/>
+      </physvol>
+      <physvol name="av_4_impr_1_tube_UpStreamBeamPipe_1_1_pv_110x24b22f0" copynumber="13">
+        <volumeref ref="tube_UpStreamBeamPipe_1_1"/>
+        <positionref ref="av_4_impr_1_tube_UpStreamBeamPipe_1_1_pv_110x24b22f0intoppos"/>
+        <rotationref ref="av_4_impr_1_tube_UpStreamBeamPipe_1_1_pv_110x24b22f0intoprot"/>
+      </physvol>
+    </volume>
+  </structure>
+  <setup name="default" version="1.0">
+    <world ref="top"/>
+  </setup>
+</gdml>

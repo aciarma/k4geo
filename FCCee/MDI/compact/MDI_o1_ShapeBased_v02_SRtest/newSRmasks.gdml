@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="/home/mlueckhof/Codes/GDML_3_1_6/schema/gdml.xsd">
+  <define>
+
+    <!-- additional SR masks test, design by G. Nigrelli and M. Sullivan -->
+    <!-- aciarma 07.09.2026 -->
+
+    <position name="ellipticalMask_upstream_pos_L" x="-1.95015" y="0" z="-130" unit="cm"/>
+    <rotation name="ellipticalMask_upstream_rot_L" x="0" y="0.859437" z="0" unit="deg"/>
+    <position name="ellipticalMask_upstream_pos_R" x="-1.95015" y="0" z="+130" unit="cm"/>
+    <rotation name="ellipticalMask_upstream_rot_R" x="0" y="-0.859437" z="0" unit="deg"/>
+
+
+    
+  </define>
+  <materials>
+    <element name="hydrogen"   formula="H"   Z="1">    <atom value="1.0079"/>   </element>
+    <element name="carbon"     formula="C"   Z="6">    <atom value="12.0107"/>   </element>
+    <element name="oxygen"     formula="O"   Z="8">    <atom value="15.999"/>   </element>
+    <material name="Vacuum">
+      <D unit="g/cm3" value="1.16336e-15"/>
+      <fraction ref="hydrogen" n="0.482"/>
+      <fraction ref="carbon" n="0.221"/>
+      <fraction ref="oxygen" n="0.297"/>
+    </material>
+    <material name="Be" Z="4">
+      <D unit="g/cm3" value="1.85"/>
+      <atom unit="g/mole" value="9.0122"/>
+    </material>
+    <material name="Cu" Z="29">
+      <D unit="g/cm3" value="8.96"/>
+      <atom unit="g/mole" value="63.546"/>
+    </material>
+    <material name="W" Z="74">
+      <D unit="g/cm3" value="19.3"/>
+      <atom unit="g/mole" value="183.84"/>
+    </material>
+    <material name="beam" state="gas">
+      <P unit="pascal" value="6.25e-06"/>
+      <MEE unit="eV" value="38.5760755714278"/>
+      <D unit="g/cm3" value="1.7e-14"/>
+      <fraction n="0.36264" ref="H"/>
+      <fraction n="0.36276" ref="N"/>
+      <fraction n="0.117748421296248" ref="C"/>
+      <fraction n="0.156851578703752" ref="O"/>
+    </material>
+  </materials>
+  <solids>
+    <box name="top_Solid" x="100" y="100" z="420.0000000002965" lunit="cm"/>
+
+    <eltube name="ellipticalMask_aperture_shape_" dx="0.4" dy="0.7" dz="1.0" lunit="cm"/>
+    <tube name="ellipticalMask_outer_shape_" rmin="0" rmax="1.5" z="2.0" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+    <subtraction name="ellipticalMask_upstream_shape_">
+      <first ref="ellipticalMask_outer_shape_"/>
+      <second ref="ellipticalMask_aperture_shape_"/>
+    </subtraction>
+
+    <tube name="ellipticalMask_Cu_shape_" rmin="1.5" rmax="1.6" z="2.0" startphi="0" deltaphi="360" aunit="deg" lunit="cm"/>
+  </solids>
+
+  <structure>
+    <volume name="ellipticalMask_upstream">
+      <materialref ref="W"/>
+      <solidref ref="ellipticalMask_upstream_shape_"/>
+    </volume>
+
+    <volume name="ellipticalMask_Cu">
+      <materialref ref="Cu"/>
+      <solidref ref="ellipticalMask_Cu_shape_"/>
+    </volume>
+
+    <volume name="ellipticalMask_Vacuum">
+      <materialref ref="beam"/>
+      <solidref ref="ellipticalMask_aperture_shape_"/>
+    </volume>
+
+    <volume name="top">
+      <materialref ref="Vacuum"/>
+      <solidref ref="top_Solid"/>
+      <physvol name="ellipticalMask_upstream_pv_L" copynumber="1">
+        <volumeref ref="ellipticalMask_upstream"/>
+        <positionref ref="ellipticalMask_upstream_pos_L"/>
+        <rotationref ref="ellipticalMask_upstream_rot_L"/>
+      </physvol>
+      <physvol name="ellipticalMask_upstream_pv_R" copynumber="2">
+        <volumeref ref="ellipticalMask_upstream"/>
+        <positionref ref="ellipticalMask_upstream_pos_R"/>
+        <rotationref ref="ellipticalMask_upstream_rot_R"/>
+      </physvol>
+
+      <physvol name="ellipticalMask_Cu_upstream_pv_L" copynumber="1">
+        <volumeref ref="ellipticalMask_Cu"/>
+        <positionref ref="ellipticalMask_upstream_pos_L"/>
+        <rotationref ref="ellipticalMask_upstream_rot_L"/>
+      </physvol>
+      <physvol name="ellipticalMask_Cu_upstream_pv_R" copynumber="2">
+        <volumeref ref="ellipticalMask_Cu"/>
+        <positionref ref="ellipticalMask_upstream_pos_R"/>
+        <rotationref ref="ellipticalMask_upstream_rot_R"/>
+      </physvol>
+
+      <physvol name="ellipticalMask_Vacuum_upstream_pv_L" copynumber="1">
+        <volumeref ref="ellipticalMask_Vacuum"/>
+        <positionref ref="ellipticalMask_upstream_pos_L"/>
+        <rotationref ref="ellipticalMask_upstream_rot_L"/>
+      </physvol>
+      <physvol name="ellipticalMask_Vacuum_upstream_pv_R" copynumber="2">
+        <volumeref ref="ellipticalMask_Vacuum"/>
+        <positionref ref="ellipticalMask_upstream_pos_R"/>
+        <rotationref ref="ellipticalMask_upstream_rot_R"/>
+      </physvol>
+
+    </volume>
+  </structure>
+  <setup name="default" version="1.0">
+    <world ref="top"/>
+  </setup>
+</gdml>
