@@ -56,7 +56,7 @@
                      rMax1="cryo_tungsten_rmax1"  rMax2="cryo_tungsten_rmax2"
                      material="W"  name="tungsten" />
 
-	    <section type="PunchedCenter"        start="cryo_min_z" end="cryo_max_z"
+	    <section type="PunchedCenter"        start="2400*mm" end="cryo_max_z"
                      rMin1="cryo_filler_rmin"      rMin2="cryo_filler_rmin"
                      rMax1="cryo_filler_rmax1" rMax2="cryo_filler_rmax2"
                      material="Al"     name="cryo_infill"/>   

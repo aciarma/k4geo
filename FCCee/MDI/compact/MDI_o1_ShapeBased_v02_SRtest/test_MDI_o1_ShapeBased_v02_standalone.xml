@@ -46,6 +46,6 @@
 
   <include ref="test_MDI_o1_ShapeBased_v02_collection.xml" />
 
-  <include ref="fields_solenoid.xml"/>
+<!--  <include ref="fields_solenoid.xml"/> -->
   
 </lccdd>
