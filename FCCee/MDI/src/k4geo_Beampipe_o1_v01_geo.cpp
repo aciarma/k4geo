@@ -503,99 +503,6 @@ static dd4hep::Ref_t create_element(dd4hep::Detector& description, xml_h element
       }
     } break;
 
-    ///////////////////////////////////////
-    case ODH::kUpstreamTrapezoid: {
-      int maskSide = 1;
-      int face = 1; // 1 for fwd (+z), -1 for bwd (-z)
-
-      if (xmlSection.hasAttr(_Unicode(side)))
-        maskSide = xmlSection.attr<int>(_Unicode(side));
-      if (xmlSection.hasAttr(_Unicode(face)))
-        face = xmlSection.attr<int>(_Unicode(face));
-
-      double extraThick = 0.0;
-      if (xmlSection.hasAttr(_Unicode(extra_thickness)))
-        extraThick = xmlSection.attr<double>(_Unicode(extra_thickness));
-
-      // Trapezoid variables
-      const double origBaseHalf = zHalf;
-      const double maskWidthHalf = rInnerStart;
-      const double offset = rInnerEnd;
-      const double maskTopHalf = rOuterStart;
-      const double origHeightHalf = rOuterEnd;
-
-      const double maskHeightHalf = origHeightHalf + (extraThick / 2.0);
-      const double maskBaseHalf = maskTopHalf + (origBaseHalf - maskTopHalf) * (maskHeightHalf / origHeightHalf);
-
-      dd4hep::Trd2 oversizedMask(maskBaseHalf, maskTopHalf, maskWidthHalf, maskWidthHalf, maskHeightHalf);
-
-      dd4hep::Rotation3D maskOrientation;
-      dd4hep::Position maskLocalPos;
-
-      if (maskSide == 1) { // Right Mask
-        maskOrientation = dd4hep::Rotation3D(dd4hep::RotationY(-90.0 * units::degree));
-        maskLocalPos = dd4hep::Position(offset + maskHeightHalf, 0.0, 0.0);
-      } else { // Left Mask
-        maskOrientation =
-            dd4hep::Rotation3D(dd4hep::RotationZ(180.0 * units::degree) * dd4hep::RotationY(-90.0 * units::degree));
-        maskLocalPos = dd4hep::Position(-(offset + maskHeightHalf), 0.0, 0.0);
-      }
-
-      dd4hep::Transform3D booleanTransform(maskOrientation, maskLocalPos);
-      dd4hep::Tube outerTube(rInnerStart, rInnerStart + extraThick + 10.0 * units::mm, zHalf * 2.0);
-      dd4hep::Transform3D tubeInMaskFrame = booleanTransform.Inverse();
-
-      dd4hep::SubtractionSolid finalMaskSolid(oversizedMask, outerTube, tubeInMaskFrame);
-
-      // wallMaterial & volName are inherited from the driver's parent scope
-      dd4hep::Volume maskVol(volName, finalMaskSolid, wallMaterial);
-      maskVol.setVisAttributes(description, "TubeVis");
-
-      // -------------------------------------------------------------
-      // Hierarchical Placement Logic
-      // -------------------------------------------------------------
-      bool hasMother = false;
-      dd4hep::Volume motherVol;
-      double localZ = zPosition;
-
-      if (xmlSection.hasChild(_Unicode(mother))) {
-        xml_comp_t x_mother = xmlSection.child(_Unicode(mother));
-        std::string motherName = x_mother.nameStr();
-
-        // Safely extract the volume from the ROOT TGeo geometry manager
-        TGeoVolume* tgeoVol = description.manager().GetVolume(motherName.c_str());
-        if (tgeoVol) {
-          motherVol = dd4hep::Volume(tgeoVol);
-          hasMother = true;
-        } else {
-          dd4hep::printout(dd4hep::ERROR, "BeamPipe", "Mother volume '%s' not found! Ensure Beampipe parsed first.",
-                           motherName.c_str());
-          throw std::runtime_error("Invalid mother hierarchy.");
-        }
-
-        if (x_mother.hasAttr(_Unicode(center_z))) {
-          localZ = zPosition - x_mother.attr<double>(_Unicode(center_z));
-        }
-      }
-
-      if (hasMother) {
-        dd4hep::Position relativePos(maskLocalPos.X(), maskLocalPos.Y(), localZ);
-        dd4hep::Transform3D relativeTransform(maskOrientation, relativePos);
-
-        dd4hep::PlacedVolume pv = motherVol.placeVolume(maskVol, relativeTransform);
-        pv.addPhysVolID("side", maskSide).addPhysVolID("module", face);
-
-      } else {
-        // Fallback global placement
-        dd4hep::Transform3D globalTransformer(dd4hep::RotationY(rotateAngle),
-                                              dd4hep::RotateY(dd4hep::Position(0, 0, zPosition), rotateAngle));
-        dd4hep::PlacedVolume pv = envelope.placeVolume(maskVol, globalTransformer * booleanTransform);
-        pv.addPhysVolID("side", maskSide).addPhysVolID("module", face);
-      }
-      break;
-    }
-      ////////////////////////
-
     case ODH::kUpstreamClippedRear:
     case ODH::kDnstreamClippedRear:
     case ODH::kUpstreamSlicedRear:
@@ -750,6 +657,93 @@ static dd4hep::Ref_t create_element(dd4hep::Detector& description, xml_h element
       break;
     }
 
+    case ODH::kUpstreamTrapezoid: {
+      int maskSide = 1;
+      int face = 1; // 1 for fwd (+z), -1 for bwd (-z)
+
+      if (xmlSection.hasAttr(_Unicode(side)))
+        maskSide = xmlSection.attr<int>(_Unicode(side));
+      if (xmlSection.hasAttr(_Unicode(face)))
+        face = xmlSection.attr<int>(_Unicode(face));
+
+      double extraThick = 0.0;
+      if (xmlSection.hasAttr(_Unicode(extra_thickness)))
+        extraThick = xmlSection.attr<double>(_Unicode(extra_thickness));
+
+      // Trapezoid variables
+      const double origBaseHalf = zHalf;
+      const double maskWidthHalf = rInnerStart;
+      const double offset = rInnerEnd;
+      const double maskTopHalf = rOuterStart;
+      const double origHeightHalf = rOuterEnd;
+
+      const double maskHeightHalf = origHeightHalf + (extraThick / 2.0);
+      const double maskBaseHalf = maskTopHalf + (origBaseHalf - maskTopHalf) * (maskHeightHalf / origHeightHalf);
+
+      Trd2 oversizedMask(maskBaseHalf, maskTopHalf, maskWidthHalf, maskWidthHalf, maskHeightHalf);
+
+      Rotation3D maskOrientation;
+      Position maskLocalPos;
+
+      if (maskSide == 1) { // Right Mask
+        maskOrientation = Rotation3D(RotationY(-90.0 * units::degree));
+        maskLocalPos = Position(offset + maskHeightHalf, 0.0, 0.0);
+      } else { // Left Mask
+        maskOrientation = Rotation3D(RotationZ(180.0 * units::degree) * RotationY(-90.0 * units::degree));
+        maskLocalPos = Position(-(offset + maskHeightHalf), 0.0, 0.0);
+      }
+
+      Transform3D booleanTransform(maskOrientation, maskLocalPos);
+      Tube outerTube(rInnerStart, rInnerStart + extraThick + 10.0 * units::mm, zHalf * 2.0);
+      Transform3D tubeInMaskFrame = booleanTransform.Inverse();
+
+      SubtractionSolid finalMaskSolid(oversizedMask, outerTube, tubeInMaskFrame);
+
+      // wallMaterial & volName are inherited from the driver's parent scope
+      Volume maskVol(volName, finalMaskSolid, wallMaterial);
+      maskVol.setVisAttributes(description, "TubeVis");
+
+      // Hierarchical Placement Logic
+      bool hasMother = false;
+      Volume motherVol;
+      double localZ = zPosition;
+
+      if (xmlSection.hasChild(_Unicode(mother))) {
+        xml_comp_t x_mother = xmlSection.child(_Unicode(mother));
+        std::string motherName = x_mother.nameStr();
+
+        // Safely extract the volume from the ROOT TGeo geometry manager
+        TGeoVolume* tgeoVol = description.manager().GetVolume(motherName.c_str());
+        if (tgeoVol) {
+          motherVol = Volume(tgeoVol);
+          hasMother = true;
+        } else {
+          dd4hep::printout(dd4hep::ERROR, "BeamPipe", "Mother volume '%s' not found! Ensure Beampipe parsed first.",
+                           motherName.c_str());
+          throw std::runtime_error("Invalid mother hierarchy.");
+        }
+
+        if (x_mother.hasAttr(_Unicode(center_z))) {
+          localZ = zPosition - x_mother.attr<double>(_Unicode(center_z));
+        }
+      }
+
+      if (hasMother) {
+        Position relativePos(maskLocalPos.X(), maskLocalPos.Y(), localZ);
+        Transform3D relativeTransform(maskOrientation, relativePos);
+
+        PlacedVolume pv = motherVol.placeVolume(maskVol, relativeTransform);
+        pv.addPhysVolID("side", maskSide).addPhysVolID("module", face);
+
+      } else {
+        // Fallback global placement
+        Transform3D globalTransformer(RotationY(rotateAngle), RotateY(Position(0, 0, zPosition), rotateAngle));
+        PlacedVolume pv = envelope.placeVolume(maskVol, globalTransformer * booleanTransform);
+        pv.addPhysVolID("side", maskSide).addPhysVolID("module", face);
+      }
+      break;
+    }
+
     case ODH::kUpDnstream: {
       // the upstream AND the downstream branch built together as one solid, so that the two walls
       // are merged where they intersect near the crossing (instead of two overlapping cones):
@@ -778,7 +772,7 @@ static dd4hep::Ref_t create_element(dd4hep::Detector& description, xml_h element
       // if inner and outer radii are equal, then omit the tube wall
       if (rInnerStart != rOuterStart || rInnerEnd != rOuterEnd) {
 
-        // solid for the tube (including vacuum and wall): union of the two solid cones
+        // solid for the tube (including vacuum and wall): boolean union of the two solid cones
         ConeSegment outerCone(zHalf, 0, rOuterStart, 0, rOuterEnd, phi1, phi2);
         UnionSolid tubeSolid(outerCone, outerCone, dnInUpFrame);
 
@@ -803,7 +797,7 @@ static dd4hep::Ref_t create_element(dd4hep::Detector& description, xml_h element
         tubeLog0.setVisAttributes(description, "VacVis");
         tubeLog1.setVisAttributes(description, "VacVis");
 
-        if (nocore) {
+        if (nocore) { // For layers stacked on top of each other, to avoid placing vacuum core more than once
 
           // placement of the wall only
           envelope.placeVolume(wallLog0, placementTransformer);
@@ -823,12 +817,11 @@ static dd4hep::Ref_t create_element(dd4hep::Detector& description, xml_h element
       break;
     }
 
+    // case ODH::kElToCone: { }
+
     default: {
       throw std::runtime_error(" Beampipe_o1_v01_geo.cpp : fatal failure !! ??  ");
-
-      //      return false; // fatal failure
     }
-
     } // end switch
   } // for all xmlSections
 
