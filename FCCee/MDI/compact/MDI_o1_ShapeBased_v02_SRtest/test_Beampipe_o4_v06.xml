@@ -12,14 +12,6 @@
       <constant name="beampipegoldtolerance" value="BeamPipeGoldTolerance"/>
     </define>
 
-    <!--  Definition of the used visualization attributes    -->
-    <display>
-        <vis name="BeamPipeVis" alpha="0.0" r="0.0" g="1.0" b="0.0" showDaughters="true" visible="false"/>
-        <vis name="GoldCoatingVis" alpha="0.0" r="0.0" g="1.0" b="1.0" showDaughters="true" visible="true"/>
-        <vis name="TubeVis"  alpha="1.0" r="1.0" g="0.7"  b="0.5"   showDaughters="true"  visible="true"/>
-        <vis name="VacVis"   alpha="1.0" r="1.0" g="1.0"  b="1.0"   showDaughters="true"  visible="false"/>
-    </display>
-
     <detectors>
 
       <!-- ;radius calculator lisp
@@ -97,7 +89,7 @@
              material="Tungsten"      
              name="SRmask_Right" 
              epsilon="mask_epsilon" >
-        <mother name="tube_UpStreamBeamPipe_1b" center_z="(6000.0*mm + 131.0*cm)/2" />    
+        <mother name="tube_UpStreamBeamPipe_1b_0" center_z="(6000.0*mm + 131.0*cm)/2" />    
     </section>
 
     <!-- RIGHT MASK , -z (side="1"),(face="-1") -->
@@ -113,7 +105,7 @@
              material="Tungsten"      
              name="SRmask_Right" 
              epsilon="mask_epsilon" >
-        <mother name="tube_UpStreamBeamPipe_1b" center_z="(6000.0*mm + 131.0*cm)/2" />
+        <mother name="tube_UpStreamBeamPipe_1b_1" center_z="(6000.0*mm + 131.0*cm)/2" />
     </section>
 
     <!-- LEFT MASK (side="-1"), (face="1") -->
@@ -129,7 +121,7 @@
              material="Tungsten"      
              name="SRmask_Left"
              epsilon="mask_epsilon" >
-        <mother name="tube_UpStreamBeamPipe_1b" center_z="(6000.0*mm + 131.0*cm)/2" />    
+        <mother name="tube_UpStreamBeamPipe_1b_0" center_z="(6000.0*mm + 131.0*cm)/2" />    
     </section>
              
     <!-- LEFT MASK (side="-1"), (face="-1") -->
@@ -145,7 +137,7 @@
              material="Tungsten"      
              name="SRmask_Left"
              epsilon="mask_epsilon" >
-        <mother name="tube_UpStreamBeamPipe_1b" center_z="(6000.0*mm + 131.0*cm)/2" />
+        <mother name="tube_UpStreamBeamPipe_1b_1" center_z="(6000.0*mm + 131.0*cm)/2" />
     </section>
 </detector>
 

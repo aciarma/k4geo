@@ -1,0 +1,37 @@
+<lccdd>
+
+  <!--
+     Example of the "UpDnstream" section type of k4geo_Beampipe_o1_v01.
+     The upstream and the downstream branch of one layer are built together as ONE solid,
+       wall = (up cone(rMax) U dn cone(rMax)) - (up cone(rMin) U dn cone(rMin)),
+     placed at +z and at -z. Where the two branches intersect near the crossing it is a single merged
+     wall with both bores kept empty; far from the crossing it is identical to the classic
+     Upstream + Dnstream pair. Overlap-free by construction, also for nested layers.
+  -->
+
+    <!--  Definition of the used visualization attributes    -->
+    <display>
+        <vis name="BeamPipeVis" alpha="0.0" r="0.0" g="1.0" b="0.0" showDaughters="true" visible="false"/>
+        <vis name="TubeVis"  alpha="1.0" r="1.0" g="0.7"  b="0.5"   showDaughters="true"  visible="true"/>
+        <vis name="VacVis"   alpha="1.0" r="1.0" g="1.0"  b="1.0"   showDaughters="true"  visible="false"/>
+    </display>
+
+    <detectors>
+
+        <comment>FFQ helium layer (helium_ffq_up + helium_ffq_dn of BeamInstrumentation_o1_v02.xml) as one UpDnstream section</comment>
+
+        <detector name="HeliumFFQ" type="k4geo_Beampipe_o1_v01" insideTrackingVolume="true" nocore="true" vis="BeamPipeVis">
+            <parameter crossingangle="CrossingAngle" />
+            <envelope vis="BlueVis">
+                <shape type="Assembly"/>
+            </envelope>
+
+            <!-- the up and dn walls would overlap up to z ~ rMax / tan(CrossingAngle/2) ~ 2717 mm -->
+            <section type="UpDnstream"    start="2400*mm"    end="cryo_max_z"
+                     rMin1="cryo_helium_ffq_rmin"  rMin2="cryo_helium_ffq_rmin"
+                     rMax1="cryo_helium_ffq_rmax"  rMax2="cryo_helium_ffq_rmax"
+                     material="He"  name="helium_ffq" />
+        </detector>
+
+    </detectors>
+</lccdd>
