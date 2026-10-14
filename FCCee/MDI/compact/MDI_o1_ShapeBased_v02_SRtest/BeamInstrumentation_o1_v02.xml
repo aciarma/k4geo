@@ -5,7 +5,7 @@
     <detectors>
         <comment>Antisolenoids Cryostat</comment>
 
-	<detector name="cylindrical-part" type="DD4hep_Mask_o1_v01" insideTrackingVolume="true" vis="ScreenSolVis">
+	<detector name="cylindrical-part" type="k4geo_Mask_o1_v01" insideTrackingVolume="true" vis="ScreenSolVis">
             <parameter crossingangle="CrossingAngle" />
             <envelope vis="CoilVis">
                 <shape type="Assembly"/>

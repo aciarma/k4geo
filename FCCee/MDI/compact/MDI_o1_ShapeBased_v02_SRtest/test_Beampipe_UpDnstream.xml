@@ -20,7 +20,7 @@
 
         <comment>FFQ helium layer (helium_ffq_up + helium_ffq_dn of BeamInstrumentation_o1_v02.xml) as one UpDnstream section</comment>
 
-        <detector name="HeliumFFQ" type="k4geo_Beampipe_o1_v01" insideTrackingVolume="true" nocore="true" vis="BeamPipeVis">
+        <detector name="HeliumFFQ" type="k4geo_Mask_o1_v01" insideTrackingVolume="true" nocore="false" vis="BeamPipeVis">
             <parameter crossingangle="CrossingAngle" />
             <envelope vis="BlueVis">
                 <shape type="Assembly"/>

@@ -75,6 +75,8 @@ file(GLOB sources
   ./detector/PID/ARC_geo_o1_v01.cpp
   ./FCCee/MDI/src/k4geo_Beampipe_o1_v01_geo.cpp
   ./FCCee/MDI/src/Mask_o1_v01_geo_claude.cpp
+  ./FCCee/MDI/src/k4geo_Mask_o1_v01_geo.cpp
+
   )
 
 if(${DD4hep_VERSION} VERSION_LESS 1.29)
