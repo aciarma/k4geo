@@ -781,14 +781,14 @@ static dd4hep::Ref_t create_element(dd4hep::Detector& description, xml_h element
         if (rInnerStart > 0 || rInnerEnd > 0) {
           ConeSegment innerCone(zHalf, 0, rInnerStart, 0, rInnerEnd, phi1, phi2);
           UnionSolid boreSolid(innerCone, innerCone, dnInUpFrame);
-          wallSolid = SubtractionSolid(tubeSolid, boreSolid);
+          // wallSolid = SubtractionSolid(tubeSolid, boreSolid);    // We try to reverse the hierarchy to reduce the number of boolean operations
         }
 
-        // tube consists of vacuum
+        // tube consists of beampipe material
         Volume tubeLog0(volName + "_0", tubeSolid, coreMaterial);
         Volume tubeLog1(volName + "_1", tubeSolid, coreMaterial);
 
-        // the wall consists of the material given in the XML
+        // the core material is defined as a daughter of the beampipe
         Volume wallLog0(volName + "_wall_0", wallSolid, wallMaterial);
         Volume wallLog1(volName + "_wall_1", wallSolid, wallMaterial);
 
