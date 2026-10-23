@@ -194,6 +194,7 @@ if(INSTALL_BEAMPIPE_STL_FILES)
     "Pipe_240430/Paraffine_19042024.stl"
     "Pipe_240430/Water_30042024.stl"
     "Pipe_01042026/Maschere_2.stl"
+    "Pipe_01042026/Mask_2_1360.stl"
   )
     # Set main FCC url
     set(FCC_URL "https://fccsw.web.cern.ch/fccsw/filesForSimDigiReco")
