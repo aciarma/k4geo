@@ -12,8 +12,8 @@
     <!--  Definition of global dictionary constants          -->
     <define>
     <!--  Definition of global dictionary constants          -->
-      <constant name="beampipegoldwidth" value="BeamPipeGoldWidth"/>
-      <constant name="beampipegoldtolerance" value="BeamPipeGoldTolerance"/>
+      <!--<constant name="beampipegoldwidth" value="BeamPipeGoldWidth"/>
+      <constant name="beampipegoldtolerance" value="BeamPipeGoldTolerance"/>-->
     </define>
 
     <!--  Definition of the used visualization attributes    -->
