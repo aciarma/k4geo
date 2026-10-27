@@ -20,17 +20,30 @@
 
         <comment>FFQ helium layer (helium_ffq_up + helium_ffq_dn of BeamInstrumentation_o1_v02.xml) as one UpDnstream section</comment>
 
-        <detector name="HeliumFFQ" type="k4geo_Mask_o1_v01" insideTrackingVolume="true" nocore="false" vis="BeamPipeVis">
+        <detector name="HeliumFFQ_m" type="k4geo_Mask_o1_v01" insideTrackingVolume="true" nocore="false" vis="BeamPipeVis">
             <parameter crossingangle="CrossingAngle" />
             <envelope vis="BlueVis">
                 <shape type="Assembly"/>
             </envelope>
 
             <!-- the up and dn walls would overlap up to z ~ rMax / tan(CrossingAngle/2) ~ 2717 mm -->
-            <section type="UpDnstream"    start="2400*mm"    end="cryo_max_z"
+            <section type="UpDnstream"    start="0*mm"    end="1000*mm"
                      rMin1="cryo_helium_ffq_rmin"  rMin2="cryo_helium_ffq_rmin"
                      rMax1="cryo_helium_ffq_rmax"  rMax2="cryo_helium_ffq_rmax"
-                     material="He"  name="helium_ffq" />
+                     material="He"  name="helium_ffq_m" />
+        </detector>
+
+	<detector name="HeliumFFQ_p" type="k4geo_Beampipe_o1_v01" insideTrackingVolume="true" nocore="false" vis="BeamPipeVis">
+            <parameter crossingangle="CrossingAngle" />
+            <envelope vis="BlueVis">
+                <shape type="Assembly"/>
+            </envelope>
+
+            <!-- the up and dn walls would overlap up to z ~ rMax / tan(CrossingAngle/2) ~ 2717 mm -->
+            <section type="UpDnstream"    start="1000*mm"    end="2800*mm"
+                     rMin1="cryo_helium_ffq_rmin"  rMin2="cryo_helium_ffq_rmin"
+                     rMax1="cryo_helium_ffq_rmax"  rMax2="cryo_helium_ffq_rmax"
+                     material="He"  name="helium_ffq_p" />
         </detector>
 
     </detectors>

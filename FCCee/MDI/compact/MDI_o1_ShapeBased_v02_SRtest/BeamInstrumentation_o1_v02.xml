@@ -134,7 +134,7 @@
 	    <!-- here -->
 	    <section type="PunchedCenter"        start="cryo_min_z" end="2400*mm-0.9*mm"
                      rMin1="cryo_filler_ffq_rmin"      rMin2="cryo_filler_ffq_rmin"
-                     rMax1="cryo_filler_ffq_rmax1" rMax2="cryo_filler_ffq_rmax2"
+                     rMax1="nose_filler_rmax2" rMax2="nose_filler_rmax2"
                      material="Al"     name="cryo_infill_ffq"/>  
 
 	    <section type="Center"    start="cryo_min_z"    end="2250*mm"

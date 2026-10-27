@@ -59,12 +59,12 @@
 		      rMax1="SeparatedBeamPipe_rmax+1*mm"  rMax2="SeparatedBeamPipe_rmax+1*mm"
 		      material="Copper"      name="UpStreamBeamPipe_1"/>-->
 
-	     <section type="UpstreamClippedFront"  start="SeparatedBeamPipe_z+3.0*mm" end="129*cm"
+	     <section type="UpstreamClippedFront"  start="SeparatedBeamPipe_z+3.0*mm" end="135*cm+0.15*mm"
                       rMin1="SeparatedBeamPipe_rmax"  rMin2="SeparatedBeamPipe_rmax"
                       rMax1="SeparatedBeamPipe_rmax+1*mm"  rMax2="SeparatedBeamPipe_rmax+1*mm"
                       material="Copper"      name="UpStreamBeamPipe_1a"/>
 
-	     <section type="Upstream" start="131*cm+0.15*mm" end="6000.0*mm"
+	     <section type="Upstream" start="137*cm+0.155*mm" end="6000.0*mm"
 		      rMin1="SeparatedBeamPipe_rmax"  rMin2="SeparatedBeamPipe_rmax"
 		      rMax1="SeparatedBeamPipe_rmax+1*mm"  rMax2="SeparatedBeamPipe_rmax+1*mm"
 		      material="Copper"      name="UpStreamBeamPipe_1b"/>
@@ -92,7 +92,7 @@
              material="Tungsten"      
              name="SRmask_Right" 
              epsilon="mask_epsilon" >
-        <mother name="tube_UpStreamBeamPipe_1b_0" center_z="(6000.0*mm + 131.0*cm)/2" />    
+        <mother name="tube_UpStreamBeamPipe_1b_0" center_z="(6000.0*mm + 137*cm+0.155*mm)/2" />    
     </section>
 
     <!-- RIGHT MASK , -z (side="1"),(face="-1") -->
@@ -108,7 +108,7 @@
              material="Tungsten"      
              name="SRmask_Right" 
              epsilon="mask_epsilon" >
-        <mother name="tube_UpStreamBeamPipe_1b_1" center_z="(6000.0*mm + 131.0*cm)/2" />
+        <mother name="tube_UpStreamBeamPipe_1b_1" center_z="(6000.0*mm + 137*cm+0.155*mm)/2" />
     </section>
 
     <!-- LEFT MASK (side="-1"), (face="1") -->
@@ -124,7 +124,7 @@
              material="Tungsten"      
              name="SRmask_Left"
              epsilon="mask_epsilon" >
-        <mother name="tube_UpStreamBeamPipe_1b_0" center_z="(6000.0*mm + 131.0*cm)/2" />    
+        <mother name="tube_UpStreamBeamPipe_1b_0" center_z="(6000.0*mm + 137*cm+0.155*mm)/2" />    
     </section>
              
     <!-- LEFT MASK (side="-1"), (face="-1") -->
@@ -140,7 +140,7 @@
              material="Tungsten"      
              name="SRmask_Left"
              epsilon="mask_epsilon" >
-        <mother name="tube_UpStreamBeamPipe_1b_1" center_z="(6000.0*mm + 131.0*cm)/2" />
+        <mother name="tube_UpStreamBeamPipe_1b_1" center_z="(6000.0*mm + 137*cm+0.155*mm)/2" />
     </section>
 </detector>
 
