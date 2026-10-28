@@ -139,8 +139,8 @@
 
 	<constant name="cryo_filler_rmin"         value="cryo_helium_ffq_rmax"/>
 
-	<constant name="cryo_filler_ffq_rmax1"    value="69*mm+3*mm"/>
-	<constant name="cryo_filler_ffq_rmax2"    value="74*mm+3*mm"/>
+<!--	<constant name="cryo_filler_ffq_rmax1"    value="69*mm+3*mm"/> -->
+<!--	<constant name="cryo_filler_ffq_rmax2"    value="74*mm+3*mm"/> -->
 	<constant name="cryo_filler_ffq_rmin"     value="27*mm"/>
 
 	<constant name="nose_vacuum_vessel_2_rmax1"    value="cryo_nose_out_r2"/>
