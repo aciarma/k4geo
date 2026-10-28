@@ -227,7 +227,7 @@
         <constant name="SeparatedBeamPipe_rmax"  value="15*mm"/>
         <constant name="SeparatedBeamPipe_z" value="1190.0*mm"/>
         <constant name="BeamPipeWidthFirstCone" value="2.0*mm" />
-        <constant name="ConeBeamPipe_Rmax" value="0.5*CrossingAngle * SeparatedBeamPipe_z + SeparatedBeamPipe_rmax" /> <!-- touch separated beam pipe -->
+        <constant name="ConeBeamPipe_Rmax" value="28.9*mm" /> <!-- keep elliptoconical max slope! -->
         <constant name="BeamPipeConeHalfAngle" value="(ConeBeamPipe_Rmax+BeamPipeWidthFirstCone-CentralBeamPipe_rmax) / (SeparatedBeamPipe_z-CentralBeamPipe_zmax)"/>
 
 	<!-- check if unused
